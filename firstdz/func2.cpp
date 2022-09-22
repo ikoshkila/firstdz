@@ -1,0 +1,46 @@
+#include "easy.h"
+
+int itc_skv(int num){
+    if (num > 0){
+        return num * num;
+    }else{
+        return -1;
+    }
+}
+int itc_spr(int a, int b){
+    if (b > 0 && a > 0){
+        return a * b;
+    }else{
+        return -1;
+    }
+}
+int itc_sqrt(int num){
+    int i = 1;
+    if (num < 0)
+        return -1;
+    else if (num == 0){
+        return 0;
+    }
+    while (i < num){
+        if (i * i == num){
+            return i;
+        }
+        i++;
+    }
+    return -1;
+}
+int itc_str(int a, int b, int c){
+    if ((a < b + c && b < a + c && c < b + a) && (a > 0 && b > 0 && c > 0)){
+        double p = 0.5*(a + b + c);
+        return itc_sqrt(p*(p - a)*(p - b)*(p - c));
+    }else{
+        return -1;
+    }
+}
+double itc_scir(int r){
+    if (r > 0){
+        return 3.14*(r*r);
+    }else{
+        return -1;
+    }
+}
