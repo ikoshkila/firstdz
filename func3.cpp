@@ -1,7 +1,7 @@
 #include "easy.h"
 
 double itc_pow(int num, int step){
-    int n = num;
+    double n = num;
     for (int i{1}; i < step; i++){
         n *= num;
     }
