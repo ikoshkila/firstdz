@@ -2,7 +2,7 @@
 
 double itc_pow(int num, int step){
     double n = num;
-    for (int i{1}; i < step; i++){
+    for (int i=1; i < step; i++){
         n *= num;
     }
     return n;
