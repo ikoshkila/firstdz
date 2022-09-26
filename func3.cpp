@@ -2,10 +2,13 @@
 
 double itc_pow(int num, int step){
     double n = num;
-    for (int i=1; i < step; i++){
-        n *= num;
+    for(int i = 1; i < ((step>=0)? step : -step); i++){
+        n*= num;
     }
-    return n;
+    if(step == 0){
+        return 1;
+    }
+    return (step>0)? n : 1/n;
 }
 bool itc_ispositive(int num){
     return num >= 0;
