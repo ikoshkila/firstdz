@@ -1,12 +1,12 @@
 #include "easy.h"
 
 double itc_pow(int num, int step){
+    if(step == 0){
+        return 1;
+    } 
     double n = num;
     for(int i = 1; i < ((step>=0)? step : -step); i++){
         n*= num;
-    }
-    if(step == 0){
-        return 1;
     }
     return (step>0)? n : 1/n;
 }
